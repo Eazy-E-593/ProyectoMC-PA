@@ -26,20 +26,25 @@
             </section>
 
             <section class="product-gallery">
+                <!-- Producto 1 -->
                 <div class="product-item">
                     <img src="{{ url_for('static', filename='images/producto1.png') }}" alt="Vestido Elegante">
-                    <h3>Vestido Elegante</h3>
-                    <p>$50.00</p>
+                    <h3>{{ productos[0][0] }}</h3>
+                    <p>${{ productos[0][1] }}</p>
                 </div>
+
+                <!-- Producto 2 -->
                 <div class="product-item">
                     <img src="{{ url_for('static', filename='images/producto2.png') }}" alt="Camisa Casual">
-                    <h3>Camisa Casual</h3>
-                    <p>$30.00</p>
+                    <h3>{{ productos[1][0] }}</h3>
+                    <p>${{ productos[1][1] }}</p>
                 </div>
+
+                <!-- Producto 3 -->
                 <div class="product-item">
                     <img src="{{ url_for('static', filename='images/producto3.png') }}" alt="Jeans Modernos">
-                    <h3>Jeans Modernos</h3>
-                    <p>$40.00</p>
+                    <h3>{{ productos[2][0] }}</h3>
+                    <p>${{ productos[2][1] }}</p>
                 </div>
             </section>
         </div>
