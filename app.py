@@ -54,7 +54,7 @@ def login_password():
 
         if user:
             session['logged_in'] = True
-            session['username'] = user[1]  # Suponemos que el nombre está en la columna 1
+            session['username'] = user[1]  # Siempre y cuando el nombre esté en la columna 1
             session['role'] = 'client'
             return redirect(url_for('inicio'))
         else:
@@ -107,12 +107,17 @@ def register():
         return redirect(url_for('login_email'))
     return render_template('register.html')
 
-# Rutas adicionales para los enlaces
+# Ruta actualizada para productos con redirección según rol
 @app.route('/productos')
 def productos():
     if 'logged_in' not in session:
         return redirect(url_for('login_email'))
-    return render_template('productos.html')
+    
+    # Redirige según el rol del usuario
+    if session['role'] == 'admin':
+        return render_template('productos.html')
+    else:
+        return render_template('productos_usuarios.html')
 
 @app.route('/clientes')
 def clientes():

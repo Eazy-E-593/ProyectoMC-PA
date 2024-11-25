@@ -368,3 +368,29 @@ form button span:nth-child(4) {
         padding: 20px;
     }
 }
+
+
+
+/* Agregar solo estos estilos nuevos a tu CSS existente */
+
+.background-user {
+    background-image: url('../images/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.background-admin {
+    background-image: url('../images/fondo_admin.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
